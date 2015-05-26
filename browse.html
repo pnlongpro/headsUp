@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Heads Up</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome-animation.min.css" />
+	<link rel="stylesheet/less" type="text/css" href="css/animate.css">
+	<link rel="stylesheet/less" type="text/css" href="style.less">
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-1 logo">
+				<img src="images/logo.png" alt="" />
+			</div>
+			<div class="search-form">
+				<div data-ng-controller="uiSearchController" class="search ng-scope">
+					<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
+						<div class="input-group">
+							<div ng-class="{active: isOpen}" class="dropdown">
+
+								<label for="search-freelancers"><input type="radio" ng-disabled="actionSelectDisabled" value="client" ng-model="context" id="search-freelancers" class="ng-untouched ng-valid ng-dirty ng-valid-parse" name="6">Freelancers</label>
+								<label for="search-jobs"><input type="radio" ng-disabled="actionSelectDisabled" value="freelancer" ng-model="context" id="search-jobs" class="ng-untouched ng-valid ng-dirty" name="7">Jobs</label>
+							</div>
+							<span ng-click="toggleDropDown()" class="button"></span>
+							<input type="text" ng-model="query" autocomplete="off" maxlength="100" ng-placeholder="placeholder" placeholder="Find freelancers" name="q" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" kl_virtual_keyboard_secure_input="on">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="more-category">
+				<span>XEM THÊM</span>
+				<ul class="list-category">
+					<li>
+						<span>Category</span>
+						<ul>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>Category</span>
+						<ul>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>Category</span>
+						<ul>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="pull-right box-login">
+				<a class="signup" href="#">Sign up </a>
+				<a class="login" href="#">Login</a>
+				<a class="pri-button" href="#">Post</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!--end header-->
+
+<section class="content-area">
+	<div class="top-site-main">
+		<div class="container">
+			<div class="row">
+				<ul class="ulbreadcrumbs" itemprop="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">browse</a></li>
+					<li> Blog</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--end top-site-main-->
+	<div class="top-content">
+		<div class="container">
+			<div class="row">
+				<div role="tabpanel">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#sending" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-share"></i>Đang Cho</a>
+						</li>
+						<li role="presentation">
+							<a href="#receiving" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-star-o"></i>Đang Muốn</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end top-content-->
+	<div class="container  site-content no-sidebar">
+		<div class="row">
+			<main id="main" class="site-main main-browse">
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="sending">
+						<div class="list-article masonry scroll">
+							<div class="content-inner-page ">
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+
+							</div>
+							<div class="pagination loop-pagination" style="display: none;">
+								<ul class="page-numbers">
+									<li><span class="page-numbers current">1</span></li>
+									<li><a class="page-numbers" href="http://demo.thimpress.com/aloxo/category/infinite-scroll/page/2">2</a></li>
+									<li><a class="page-numbers" href="http://demo.thimpress.com/aloxo/category/infinite-scroll/page/3">3</a></li>
+									<li><a class="next page-numbers" href="http://demo.thimpress.com/aloxo/category/infinite-scroll/page/2">&gt;</a></li>
+								</ul>
+							</div>
+						</div>
+						<!--end list-article-->
+					</div>
+
+					<div role="tabpanel" class="tab-pane" id="receiving">
+						<div class="list-article masonry">
+							<div class="content-inner-page">
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+
+
+								<article class="post-item">
+									<div class="content-grid">
+										<div class="thumb">
+											<a href="#"><img src="images/image1.jpg" alt="" /></a>
+										</div>
+										<div class="info-content">
+											<div class="author">
+												<span class="avata"><img src="images/avata.jpg" alt="" /></span>
+												<a href="#">hoanglan</a>
+											</div>
+											<h3 class="post-title"><a href="#">National fast food day Foodimentary</a></h3>
+											<p>Hi, We’re Melville Studio. An architecture & design </p>
+
+											<div class="entry-footer">
+												<span class="date">10 phút trước</span>
+
+												<div class="meta">
+													<span class="whishlist"><a href="#"><i class="fa fa-heart-o"></i>8</a></span>
+													<span class="comment"><a href="#"><i class="fa fa-comment-o"></i>10</a></span>
+
+												</div>
+												<div class="clear"></div>
+											</div>
+										</div>
+									</div>
+								</article>
+								<!--end post-item-->
+							</div>
+						</div>
+						<!--end list-article-->
+					</div>
+					<div class="loading">
+							<a href="javascript:;"><img src="images/animate.png" alt="" /><span>Chờ chút nhé...</span></a>
+						</div>
+				</div>
+			</main>
+			<!--end sidebar-->
+		</div>
+	</div>
+</section>
+
+</div><!--end content-->
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="footer-top">
+				<div class="widget menu-widget">
+					<h3>About us</h3>
+					<ul>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Our Partners</a></li>
+						<li><a href="#">Advertising Online</a></li>
+						<li><a href="#">Site Map</a></li>
+					</ul>
+				</div>
+				<div class="widget menu-widget">
+					<h3>Need Help?</h3>
+					<ul>
+						<li><a href="#">How do I add an offer?</a></li>
+						<li><a href="#">How do I find a vehicle</a></li>
+						<li><a href="#">Price list</a></li>
+						<li><a href="#">Office for car dealers</a></li>
+					</ul>
+				</div>
+
+				<div class="widget menu-widget">
+					<h3>User area</h3>
+					<ul>
+						<li><a href="#">Add an offer</a></li>
+						<li><a href="#">Register dealder</a></li>
+						<li><a href="#">Login Dealer</a></li>
+						<li><a href="#">News</a></li>
+					</ul>
+				</div>
+
+				<div class="widget newsletter ">
+					<h3>Get daily offers</h3>
+
+					<form action="">
+						<div class="form-group">
+							<input type="email" class="form-control" id="email-newsletter" />
+							<button type="submit" class="btn btn-default">Send</button>
+
+						</div>
+						<span>15,000+ other subscribers</span>
+					</form>
+					<div class="social">
+						<a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fa fa-google-plus"></i></span></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--end top-footer-->
+			<div class="footer-bottom">
+				<ul>
+					<li><a href="#">Terms & Conditions </a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#"> Contact Us</a></li>
+					<li><a href="#"> Editorial Team</a></li>
+					<li><a href="#"> About Us</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Corporate Advertising</a></li>
+					<li><a href="#">Competitions</a></li>
+					<li><a href="#">Shareholders</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+				<p class="copyright">© web.vn Limited 2015</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!--script-->
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="js/bootstrap3-typeahead.min.js"></script>
+<script type="text/javascript" src="js/less.min.js"></script>
+<script type="text/javascript" src="js/core.0.5.0.min.js"></script>
+<script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.js"></script>
+<script type="text/javascript" src="js/custom-script.js"></script>
+<!--end script-->
+
+</body>
+</html>

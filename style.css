@@ -230,11 +230,11 @@ a.xem-theo {
 	background: #00a991;
 	color: #fff;
 }
-
-.page-login #content .container {
+/*thang*/
+.page-login {
 	padding: 34px 0 102px;
 }
-.page-login #content .content-left {
+.page-login .content-left {
 	float: left;
 	margin-right: 21px;
 	width: 309px;
@@ -243,41 +243,41 @@ a.xem-theo {
 	padding: 15px 15px 114px;
 	height: 366px;
 }
-.page-login #content  h2 {
+.page-login  h2 {
 	color: #414242;
 	font-size: 24px;
 	margin: 9px 0;
 	font-weight: bold;
 }
-.page-login #content  .form-group {
+.page-login  .form-group {
 	margin-bottom: 10px;
 }
-.page-login #content .form-control {
+.page-login .form-control {
 	border: 2px solid #eeecec;
 	box-shadow: none;
 	height: 42px;
 }
-.page-login #content  .form-control:focus {
+.page-login  .form-control:focus {
 	border: 2px solid #00bb88;
 	box-shadow: none;
 	box-sizing: border-box;
 }
-.page-login #content .form-control::-moz-placeholder {
+.page-login .form-control::-moz-placeholder {
 	color: #ababab;
 	opacity: 1;
 	font-size: 12px;
 }
-.page-login #content .checkbox a {
+.page-login .checkbox a {
 	color: #ababab;
 	float: right;
 	font-size: 12px;
 	text-decoration: underline;
 }
-.page-login #content .checkbox label {
+.page-login .checkbox label {
 	color: #ababab;
 	font-size: 12px;
 }
-.page-login #content .btn.btn-default {
+.page-login .btn.btn-default {
 	background: #00bb88 none repeat scroll 0 0;
 	border: medium none;
 	box-sizing: border-box;
@@ -289,20 +289,20 @@ a.xem-theo {
 	margin: 0 auto;
 	width: 280px;
 }
-.page-login #content .content-right {
+.page-login .content-right {
 	background-color: #fff;
 	float: right;
 	width: 840px;
 	height: 366px;
 }
-.page-login #content .connect-social {
+.page-login .connect-social {
 	padding-left: 32px;
 	padding-top: 15px;
 	width: 403px;
 	padding-right: 90px;
 	float: left;
 }
-.page-login #content .connect-social button {
+.page-login .connect-social button {
 	width: 100%;
 	height: 42px;
 	margin-bottom: 10px;
@@ -312,13 +312,13 @@ a.xem-theo {
 	font-size: 14px;
 	border-radius: 3px;
 }
-.page-login #content .connect-social .btn-face {
+.page-login .connect-social .btn-face {
 	position: relative;
 }
-.page-login #content .connect-social .btn-twitter {
+.page-login .connect-social .btn-twitter {
 	position: relative;
 }
-.page-login #content .connect-social .btn-face button:before {
+.page-login .connect-social .btn-face button:before {
 	background: url(images/ico-face.png) no-repeat;
 	content: " ";
 	position: absolute;
@@ -328,7 +328,7 @@ a.xem-theo {
 	height: 42px;
 	width: 47px;
 }
-.page-login #content .connect-social .btn-twitter button:before {
+.page-login .connect-social .btn-twitter button:before {
 	background: url(images/ico-twitter.png) no-repeat;
 	content: " ";
 	position: absolute;
@@ -338,24 +338,24 @@ a.xem-theo {
 	height: 42px;
 	width: 47px;
 }
-.page-login #content .connect-social .btn-face button {
+.page-login .connect-social .btn-face button {
 	background-color: #3e8bdb;
 	color: #fff;
 }
-.page-login #content .connect-social .btn-twitter button {
+.page-login .connect-social .btn-twitter button {
 	background-color: #4dddd8;
 	color: #fff;
 }
-.page-login #content .connect-social p {
+.page-login .connect-social p {
 	font-size: 12px;
 	color: #ababab;
 	margin: 10px 0 0;
 }
-.page-login #content .connect-social p a {
+.page-login .connect-social p a {
 	color: #ababab;
 	text-decoration: underline;
 }
-.page-login #content .bnt-hay {
+.page-login .bnt-hay {
 	background-color: #eaebec;
 	display: inline-block;
 	height: 100%;
@@ -363,7 +363,7 @@ a.xem-theo {
 	position: relative;
 	float: left;
 }
-.page-login #content .bnt-hay span {
+.page-login .bnt-hay span {
 	border: 1px solid #eaebec ;
 	border-radius: 10px;
 	padding: 5px;
@@ -373,7 +373,7 @@ a.xem-theo {
 	background-color: #fff;
 	color: #979797;
 }
-.page-login #content .create-account {
+.page-login .create-account {
 	display: inline-block;
 	width: 433px;
 	float: left;
@@ -383,42 +383,43 @@ a.xem-theo {
 }
 
 /****************PAGE-POST*******************/
-.page-post #content {
+.page-post {
 	padding: 60px 0;
 }
-.page-post #content .container {
+.page-post {
 	background-color: #fff;
 }
-.page-post #content .content-post {
+.page-post .content-post {
 	margin: 0 auto;
 	width: 960px;
 }
-.page-post #content .content-post form {
+.page-post .content-post form {
 	height: 1010px;
 }
-.page-post #content .content-post .form-group {
+.page-post .content-post .form-group {
 	margin: 0 auto 10px;
 	width: 450px;
 }
-.page-post #content .content-post .radio-inline {
+.page-post .content-post .radio-inline {
 	color: #414242;
 	font-size: 18px;
 }
-.page-post #content .content-post .form-group.btn-rad {
+.page-post .content-post .form-group.btn-rad {
 	margin: 40px auto 25px;
 }
-.page-post #content .content-post .form-group input[type="file"] {
+.page-post .content-post .form-group input[type="file"] {
 	border: 2px solid #edebeb;
 	height: 54px;
-	padding-left: 103px;
+	padding: 13px 0 10px 110px;
 	width: 100%;
 	border-radius: 5px;
 
+
 }
-.page-post #content .content-post .form-group.file-style {
+.page-post .content-post .form-group.file-style {
 	position: relative;
 }
-.page-post #content .content-post .form-group.file-style span{
+.page-post .content-post .form-group.file-style span{
 	height: 54px;
 	width: 184px;
 	background:url("images/inputfile.png") no-repeat;
@@ -428,26 +429,26 @@ a.xem-theo {
 	border-radius: 5px 0 0 5px;
 }
 
-.page-post #content .form-control {
+.page-post .form-control {
 	border: 2px solid #eeecec;
 	box-shadow: none;
 	height: 42px;
 }
-.page-post #content textarea.form-control {
+.page-post textarea.form-control {
 	height: 174px;
 	resize: none;
 }
-.page-post #content  .form-control:focus {
+.page-post  .form-control:focus {
 	border: 2px solid #00bb88;
 	box-shadow: none;
 	box-sizing: border-box;
 }
-.page-post #content .form-control::-moz-placeholder {
+.page-post .form-control::-moz-placeholder {
 	color: #767676;
 	opacity: 1;
 	font-size: 14px;
 }
-.page-post #content .checkbox a {
+.page-post .checkbox a {
 	color: #ababab;
 	float: right;
 	font-size: 12px;
@@ -457,26 +458,26 @@ hr {
 	margin-bottom: 18px;
 	margin-top: 30px;
 }
-.page-post #content .content-post h2 {
+.page-post .content-post h2 {
 	margin: 0 auto 17px;
 	width: 450px;
 	color: #414242;
 	font-size: 18px;
 }
-.page-post #content .content-post .form-group img {
+.page-post .content-post .form-group img {
 	height: 97px;
 	width: 142px;
 	margin-right: 5px;
 	border-radius: 4px;
 }
-.page-post #content .content-post .checkbox {
+.page-post .content-post .checkbox {
 	margin: 78px auto 40px;
 	width: 450px;
 }
-.page-post #content .content-post .checkbox label {
+.page-post .content-post .checkbox label {
 	font-size: 14px;
 }
-.page-post #content .content-post .btn-default {
+.page-post .content-post .btn-default {
 	margin: 0 auto;
 	width: 450px;
 	display: block;
@@ -496,4 +497,38 @@ select option:first-child{
 }
 select option{
 	color: #555;
+}
+
+
+/*Manh*/
+
+/*ADD*/
+.sigle-slider-post{
+    width: 856px;
+    height: 450px;
+    position: relative;
+}
+.sigle-slider-post .bx-wrapper{
+    margin: 0;
+}
+.sigle-slider-post .bx-wrapper .bx-viewport{
+    box-shadow: none;
+    border: none;
+    left: 0;
+}
+#bx-pager{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255,255,255,0.6);
+    padding: 8px 6px;
+    text-align: right;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#bx-pager > a{
+    margin-left: 15px;
+
 }
