@@ -9,6 +9,7 @@
 	<link rel="stylesheet/less" type="text/css" href="css/animate.css">
 	<link rel="stylesheet/less" type="text/css" href="style.less">
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 <header id="header">
@@ -21,15 +22,16 @@
 				<div data-ng-controller="uiSearchController" class="search ng-scope">
 					<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
 						<div class="input-group">
-							<div ng-class="{active: isOpen}" class="dropdown">
-								<input type="radio" ng-disabled="actionSelectDisabled" value="client" ng-model="context" id="search-freelancers" class="ng-untouched ng-valid ng-dirty ng-valid-parse" name="6">
-								<label for="search-freelancers">Freelancers</label>
-
-								<input type="radio" ng-disabled="actionSelectDisabled" value="freelancer" ng-model="context" id="search-jobs" class="ng-untouched ng-valid ng-dirty" name="7">
-								<label for="search-jobs">Jobs</label>
-							</div>
+							<ul ng-class="{active: isOpen}" class="dropdown" style="display: none;">
+								<li><a href="#">Jobs</a></li>
+								<li><a href="#">Freelancers</a></li>
+								<li><a href="#">Jobs</a></li>
+								<li><a href="#">Freelancers</a></li>
+								<li><a href="#">Jobs</a></li>
+								<li><a href="#">Freelancers</a></li>
+							</ul>
 							<span ng-click="toggleDropDown()" class="button"></span>
-							<input type="text" ng-model="query" autocomplete="off" maxlength="100" ng-placeholder="placeholder" placeholder="Find freelancers" name="q" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" kl_virtual_keyboard_secure_input="on">
+							<input type="text" autocomplete="off" maxlength="100" placeholder="Search" name="q" class="search-input">
 						</div>
 					</form>
 				</div>
@@ -73,8 +75,7 @@
 				</ul>
 			</div>
 
-
-			<div class="pull-right box-login">
+			<div class="col-md-4 col-sm-12 text-right box-login">
 				<a class="signup" href="#">Sign up </a>
 				<a class="login" href="#">Login</a>
 				<a class="pri-button" href="#">Post</a>
@@ -85,7 +86,7 @@
 <!--end header-->
 
 <section class="content-area">
-	<div class="container  site-content has-sidebar">
+	<div class="container  site-content has-sidebar right-sidebar">
 		<div class="row">
 			<main id="main" class="site-main ">
 				<div class="list-article">

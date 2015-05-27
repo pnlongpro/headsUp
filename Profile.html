@@ -2,425 +2,596 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Heads Up</title>
 	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet/less" type="text/css" href="style.less" />
+	<link rel="stylesheet" href="js/jquery.checkable/jquery.rs.checkable.css" />
+	<link rel="stylesheet/less" type="text/css" href="css/animate.css">
+	<link rel="stylesheet/less" type="text/css" href="style.less">
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header id="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-1 logo">
+				<img src="images/logo.png" alt="" />
+			</div>
+			<div class="search-form">
+				<div data-ng-controller="uiSearchController" class="search ng-scope">
+					<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
+						<div class="input-group">
+							<div ng-class="{active: isOpen}" class="dropdown">
+
+								<label for="search-freelancers"><input type="radio" ng-disabled="actionSelectDisabled" value="client" ng-model="context" id="search-freelancers" class="ng-untouched ng-valid ng-dirty ng-valid-parse" name="6">Freelancers</label>
+								<label for="search-jobs"><input type="radio" ng-disabled="actionSelectDisabled" value="freelancer" ng-model="context" id="search-jobs" class="ng-untouched ng-valid ng-dirty" name="7">Jobs</label>
+							</div>
+							<span ng-click="toggleDropDown()" class="button"></span>
+							<input type="text" ng-model="query" autocomplete="off" maxlength="100" ng-placeholder="placeholder" placeholder="Find freelancers" name="q" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" kl_virtual_keyboard_secure_input="on">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="more-category">
+				<span>XEM THÊM</span>
+				<ul class="list-category">
+					<li>
+						<span>Category</span>
+						<ul>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>Category</span>
+						<ul>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>Category</span>
+						<ul>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+							<li><a href="#">Sub Category</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="pull-right box-login">
+				<a class="signup" href="#">Sign up </a>
+				<a class="login" href="#">Login</a>
+				<a class="pri-button" href="#">Post</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!--end header-->
+<section class="content-area">
+	<div class="top-site-main">
+		<div class="container">
+			<div class="row">
+				<ul class="ulbreadcrumbs" itemprop="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">browse</a></li>
+					<li> Blog</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--end top-site-main-->
 	<div class="banner-profile">
 		<img style="width: 100%; max-width: 100%;" src="images/banner-profile.jpg" alt="" />
 	</div>
-	<div class="container">
+	<div class="container  site-content no-sidebar">
 		<div class="row">
-			<!--sidebar-left-setting-->
-			<div class="col-sm-12 col-md-3 sidebar-left-setting">
-				<div class="avatar-images">
-					<a href="#">
-						<img src="images/avatar.jpg" alt="" />
-					</a>
-					<div class="clear"></div>
-					<a href="#" class="user-name">trung kien</a>
-				</div>
-				<div class="box-follow">
-					<div class="row">
-						<div class="col-sm-1"></div>
-						<div class="left col-sm-5">
-							<span>Following </span>
-							<span class="number">100</span>
+			<main id="main" class="site-main main-browse">
+				<!--sidebar-left-setting-->
+				<div class="col-sm-12 col-md-3 sidebar-left-setting">
+					<div class="avatar-images">
+						<a href="#">
+							<img src="images/avatar.jpg" alt="" />
+						</a>
+
+						<div class="clear"></div>
+						<a href="#" class="user-name">trung kien</a>
+					</div>
+					<div class="box-follow">
+						<div class="row">
+							<div class="col-sm-1"></div>
+							<div class="left col-sm-5">
+								<span>Following </span>
+								<span class="number">100</span>
+							</div>
+							<div class="col-sm-1"></div>
+							<div class="right col-sm-5">
+								<span>Followers </span>
+								<span class="number">88</span>
+							</div>
 						</div>
-						<div class="col-sm-1"></div>
-						<div class="right col-sm-5">
-							<span>Followers </span>
-							<span class="number">88</span>
+						<a href="#" class="button-follow"><img src="images/button-follow.png" alt="" /></a>
+
+						<div class="clear"></div>
+						<p><span>Following</span></p>
+
+						<div class="list-following">
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
+							<div class="clear">	</div>
 						</div>
 					</div>
-					<a href="#" class="button-follow"><img src="images/button-follow.png" alt="" /></a>
-					<div class="clear"></div>
-					<p><span>Following</span></p>
-					<div class="list-following">
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-						<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-					</div>
 				</div>
-			</div>
-			<!--/sidebar-left-setting-->
-			<!--content-right-setting-->
-			<div class="col-sm-12 col-md-9 content-right-setting">
-				<a class="xem-theo" href="#"><img src="images/xemtheo.png" alt="" /></a>
-				<ul class="list-xem-theo list-inline">
-					<li><a href="#">Dòng thời gian</a></li>
-					<li><a href="#">Hoạt động của tôi</a></li>
-				</ul>
-				<div class="box-list-xem-theo">
-					<div class="list-xem-theo-items" style="display: block;">
-						<ul>
-							<li>
+				<!--/sidebar-left-setting-->
+				<!--content-right-setting-->
+				<div class="col-sm-12 col-md-9 content-right-setting">
+					<a class="xem-theo" href="#"><img src="images/xemtheo.png" alt="" /></a>
+					<ul class="list-xem-theo list-inline">
+						<li><a href="#">Dòng thời gian</a></li>
+						<li><a href="#">Hoạt động của tôi</a></li>
+					</ul>
+					<div class="box-list-xem-theo">
+						<div class="list-xem-theo-items" style="display: block;">
+							<ul>
+								<li>
 								<span class="date-post">
 									15 <strong>5</strong>
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post">
 									10 <strong>5</strong>
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="list-xem-theo-items">
-						<ul>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list-xem-theo-items">
+							<ul>
+								<li>
 								<span class="date-post">
 									15 <strong>5</strong>
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post-empty">
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-							<li>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
 								<span class="date-post">
 									10 <strong>5</strong>
 								</span>
-								<div class="title-post">
-									<a class="title-posts" href="#">Username2</a> cho ABCD
-								</div>
-								<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-								<ul class="box-list-thumbnail">
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider1.png" alt="" />
-									</li>
-									<li>
-										<img src="images/slider2.png" alt="" />
-									</li>
-								</ul>
-								<div class="box-like-comment">
-									<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-									<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-								</div>
-							</li>
-						</ul>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider1.png" alt="" />
+										</li>
+										<li>
+											<img src="images/slider2.png" alt="" />
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+							</ul>
+						</div>
 					</div>
+					<!--page-navigation-->
+					<ul class="wp-pagenavi">
+						<span class="page-numbers current">1</span>
+						<a href="#" class="page-numbers">2</a>
+						<a href="#" class="page-numbers">3</a>
+						<a href="#" class="page-numbers">4</a>
+						<a href="#" class="page-numbers">5</a>
+						<span>...</span>
+						<a href="#" class="page-numbers">32</a>
+						<a href="#" class="next page-numbers">»</a>
+					</ul>
 				</div>
-				<!--page-navigation-->
-				<ul class="wp-pagenavi">
-					<span class="page-numbers current">1</span>
-					<a href="#" class="page-numbers">2</a>
-					<a href="#" class="page-numbers">3</a>
-					<a href="#" class="page-numbers">4</a>
-					<a href="#" class="page-numbers">5</a>
-					<span>...</span>
-					<a href="#" class="page-numbers">32</a>
-					<a href="#" class="next page-numbers">»</a>
-				</ul>				
-			</div>
-			<!--/content-right-setting-->
+				<!--/content-right-setting-->
+			</main>
 		</div>
 	</div>
-</header><!--end header-->
-
-<div id="content">
-
-</div><!--end content-->
+</section>
 
 <footer>
+	<div class="container">
+		<div class="row">
+			<div class="footer-top">
+				<div class="widget menu-widget">
+					<h3>About us</h3>
+					<ul>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Our Partners</a></li>
+						<li><a href="#">Advertising Online</a></li>
+						<li><a href="#">Site Map</a></li>
+					</ul>
+				</div>
+				<div class="widget menu-widget">
+					<h3>Need Help?</h3>
+					<ul>
+						<li><a href="#">How do I add an offer?</a></li>
+						<li><a href="#">How do I find a vehicle</a></li>
+						<li><a href="#">Price list</a></li>
+						<li><a href="#">Office for car dealers</a></li>
+					</ul>
+				</div>
 
+				<div class="widget menu-widget">
+					<h3>User area</h3>
+					<ul>
+						<li><a href="#">Add an offer</a></li>
+						<li><a href="#">Register dealder</a></li>
+						<li><a href="#">Login Dealer</a></li>
+						<li><a href="#">News</a></li>
+					</ul>
+				</div>
+
+				<div class="widget newsletter ">
+					<h3>Get daily offers</h3>
+
+					<form action="">
+						<div class="form-group">
+							<input type="email" class="form-control" id="email-newsletter" />
+							<button type="submit" class="btn btn-default">Send</button>
+
+						</div>
+						<span>15,000+ other subscribers</span>
+					</form>
+					<div class="social">
+						<a href="#" target="_blank"><span><i class="fa fa-facebook"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fa fa-twitter"></i></span></a>
+						<a href="#" target="_blank"><span><i class="fa fa-google-plus"></i></span></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--end top-footer-->
+			<div class="footer-bottom">
+				<ul>
+					<li><a href="#">Terms & Conditions </a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#"> Contact Us</a></li>
+					<li><a href="#"> Editorial Team</a></li>
+					<li><a href="#"> About Us</a></li>
+					<li><a href="#">Careers</a></li>
+					<li><a href="#">Corporate Advertising</a></li>
+					<li><a href="#">Competitions</a></li>
+					<li><a href="#">Shareholders</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+				<p class="copyright">© web.vn Limited 2015</p>
+			</div>
+		</div>
+	</div>
 </footer>
 
 <!--script-->
 <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="js/bootstrap3-typeahead.min.js"></script>
 <script type="text/javascript" src="js/less.min.js"></script>
-<script type="text/javascript" src="js/custom-script.js"></script>
 <script type="text/javascript" src="js/core.0.5.0.min.js"></script>
 <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/imagesloaded.pkgd.js"></script>
+<script type="text/javascript" src="js/jquery.checkable/jquery.rs.checkable.js"></script>
+<script type="text/javascript" src="js/custom-script.js"></script>
 <!--end script-->
 
 </body>

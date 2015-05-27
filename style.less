@@ -1,5 +1,5 @@
 @import url(css/animate.css);
-
+@import url('fonts/styles.css');
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size:   14px;
@@ -258,7 +258,12 @@ body {
 		&.has-sidebar {
 			.site-main {
 				width: calc(~"100% - 305px");
-				float: left;
+
+			}
+			&.right-sidebar{
+				.site-main {
+					float: left;
+				}
 			}
 		}
 	}
@@ -845,6 +850,40 @@ footer {
 		}
 	}
 }
+.sidebar-single{
+	width: 300px;
+	float: right;
+}
+.site-main {
+	&.detail{
+		width: calc(~"100% - 300px");
+		.entry-content{
+			text-align: center;
+			h1{
+				//font-family: 'VNF-Oswald';
+				font-size: 30px;
+				color: #0f0f0f;
+				margin: 15px 0 0;
+				text-transform: uppercase;
+			}
+			.date-post{
+				display: block;
+				font-size: 18px;
+				color: #a8a8a8;
+				text-transform: uppercase;
+				//font-family: 'VNF-Oswald';
+			}
+			.post-type{
+				display: inline-block;
+				background: #ffc600;
+				color: #fff;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 28px;
+			}
+		}
+	}
 
+}
 
 
