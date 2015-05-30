@@ -3,77 +3,86 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Heads Up</title>
+	<title>Heads Up | Profile</title>
 	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="js/jquery.checkable/jquery.rs.checkable.css" />
-	<link rel="stylesheet/less" type="text/css" href="css/animate.css">
-	<link rel="stylesheet/less" type="text/css" href="style.less">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery.checkable/jquery.rs.checkable.css">
+	<link rel="stylesheet" type="text/css" href="js/bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 <header id="header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2 col-sm-1 logo">
-				<img src="images/logo.png" alt="" />
-			</div>
-			<div class="search-form">
-				<div data-ng-controller="uiSearchController" class="search ng-scope">
-					<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
-						<div class="input-group">
-							<div ng-class="{active: isOpen}" class="dropdown">
-
-								<label for="search-freelancers"><input type="radio" ng-disabled="actionSelectDisabled" value="client" ng-model="context" id="search-freelancers" class="ng-untouched ng-valid ng-dirty ng-valid-parse" name="6">Freelancers</label>
-								<label for="search-jobs"><input type="radio" ng-disabled="actionSelectDisabled" value="freelancer" ng-model="context" id="search-jobs" class="ng-untouched ng-valid ng-dirty" name="7">Jobs</label>
-							</div>
-							<span ng-click="toggleDropDown()" class="button"></span>
-							<input type="text" ng-model="query" autocomplete="off" maxlength="100" ng-placeholder="placeholder" placeholder="Find freelancers" name="q" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" kl_virtual_keyboard_secure_input="on">
-						</div>
-					</form>
+			<div class="col-md-8 col-sm-12">
+				<div class="logo">
+					<img src="images/logo.png" alt="" />
 				</div>
+				<div class="top-search">
+					<div class="search-form">
+						<div class="search ng-scope">
+							<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
+								<div class="input-group">
+									<ul ng-class="{active: isOpen}" class="dropdown" style="display: none;">
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Freelancers</a></li>
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Freelancers</a></li>
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Freelancers</a></li>
+									</ul>
+									<span ng-click="toggleDropDown()" class="button"></span>
+									<input type="text" autocomplete="off" maxlength="100" placeholder="Search" name="q" class="search-input">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="more-category">
+						<span>XEM THÊM</span>
+						<ul class="list-category">
+							<li>
+								<span>Category</span>
+								<ul>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Category</span>
+								<ul>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Category</span>
+								<ul>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="more-category">
-				<span>XEM THÊM</span>
-				<ul class="list-category">
-					<li>
-						<span>Category</span>
-						<ul>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>Category</span>
-						<ul>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>Category</span>
-						<ul>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-
-			<div class="pull-right box-login">
+			<div class="col-md-4 col-sm-12 text-right box-login">
 				<a class="signup" href="#">Sign up </a>
 				<a class="login" href="#">Login</a>
 				<a class="pri-button" href="#">Post</a>
@@ -82,7 +91,7 @@
 	</div>
 </header>
 <!--end header-->
-<section class="content-area">
+<section class="content-area no-padding">
 	<div class="top-site-main">
 		<div class="container">
 			<div class="row">
@@ -141,20 +150,29 @@
 							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
 							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
 							<a href="#" class="items"><img src="images/list-follow-items.png" alt="" /></a>
-							<div class="clear">	</div>
+
+							<div class="clear"></div>
 						</div>
 					</div>
 				</div>
 				<!--/sidebar-left-setting-->
 				<!--content-right-setting-->
 				<div class="col-sm-12 col-md-9 content-right-setting">
-					<a class="xem-theo" href="#"><img src="images/xemtheo.png" alt="" /></a>
+					<div class="view-by">
+						<span class="xem-theo">Xem theo</span>
+
+						<div class="drop-down">
+							<!--<a href="#">Đang Cho</a>-->
+							<!--<a href="#">Mong Muốn</a>-->
+						</div>
+					</div>
+
 					<ul class="list-xem-theo list-inline">
 						<li><a href="#">Dòng thời gian</a></li>
 						<li><a href="#">Hoạt động của tôi</a></li>
 					</ul>
 					<div class="box-list-xem-theo">
-						<div class="list-xem-theo-items" style="display: block;">
+						<div class="view-by-items" style="display: block;">
 							<ul>
 								<li>
 								<span class="date-post">
@@ -167,43 +185,28 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
-										</li>
-									</ul>
-									<div class="box-like-comment">
-										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-									</div>
-								</li>
-								<li>
-								<span class="date-post-empty">
-								</span>
-
-									<div class="title-post">
-										<a class="title-posts" href="#">Username2</a> cho ABCD
-									</div>
-									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-									<ul class="box-list-thumbnail">
-										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -221,43 +224,28 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+								<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
-										</li>
-									</ul>
-									<div class="box-like-comment">
-										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-									</div>
-								</li>
-								<li>
-								<span class="date-post-empty">
-								</span>
-
-									<div class="title-post">
-										<a class="title-posts" href="#">Username2</a> cho ABCD
-									</div>
-									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-									<ul class="box-list-thumbnail">
-										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -275,16 +263,71 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
+								<span class="date-post-empty">
+								</span>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
+								<span class="date-post-empty">
+								</span>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -303,16 +346,28 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -322,7 +377,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="list-xem-theo-items">
+						<div class="view-by-items">
 							<ul>
 								<li>
 								<span class="date-post">
@@ -335,43 +390,16 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
-										</li>
-									</ul>
-									<div class="box-like-comment">
-										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-									</div>
-								</li>
-								<li>
-								<span class="date-post-empty">
-								</span>
-
-									<div class="title-post">
-										<a class="title-posts" href="#">Username2</a> cho ABCD
-									</div>
-									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-									<ul class="box-list-thumbnail">
-										<li>
-											<img src="images/slider1.png" alt="" />
-										</li>
-										<li>
-											<img src="images/slider2.png" alt="" />
-										</li>
-										<li>
-											<img src="images/slider1.png" alt="" />
-										</li>
-										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -389,43 +417,16 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
-										</li>
-									</ul>
-									<div class="box-like-comment">
-										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
-										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
-									</div>
-								</li>
-								<li>
-								<span class="date-post-empty">
-								</span>
-
-									<div class="title-post">
-										<a class="title-posts" href="#">Username2</a> cho ABCD
-									</div>
-									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
-									<ul class="box-list-thumbnail">
-										<li>
-											<img src="images/slider1.png" alt="" />
-										</li>
-										<li>
-											<img src="images/slider2.png" alt="" />
-										</li>
-										<li>
-											<img src="images/slider1.png" alt="" />
-										</li>
-										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -443,16 +444,94 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
+								<span class="date-post-empty">
+								</span>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+									</ul>
+									<div class="box-like-comment">
+										<a href="#"><span><i class="fa icons-like"></i> 520</span></a>
+										<a href="#"><span><i class="fa icons-comment"></i> 120</span></a>
+									</div>
+								</li>
+								<li>
+								<span class="date-post-empty">
+								</span>
+
+									<div class="title-post">
+										<a class="title-posts" href="#">Username2</a> cho ABCD
+									</div>
+									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
+									<ul class="box-list-thumbnail">
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -471,16 +550,28 @@
 									<p>Đây AUX / Oaks HX-8062 phích điện không gỉ 5l cách thứ sáu, 304 thép lót ...</p>
 									<ul class="box-list-thumbnail">
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider1.png" alt="" />
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
 										</li>
 										<li>
-											<img src="images/slider2.png" alt="" />
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider1.png" data-lightbox="roadtrip"><img src="images/slider1.png" alt="" /></a>
+										</li>
+										<li>
+											<a href="images/slider2.png" data-lightbox="roadtrip"><img src="images/slider2.png" alt="" /></a>
 										</li>
 									</ul>
 									<div class="box-like-comment">
@@ -582,15 +673,15 @@
 </footer>
 
 <!--script-->
-<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-<script type="text/javascript" src="js/bootstrap3-typeahead.min.js"></script>
-<script type="text/javascript" src="js/less.min.js"></script>
-<script type="text/javascript" src="js/core.0.5.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="js/imagesloaded.pkgd.js"></script>
 <script type="text/javascript" src="js/jquery.checkable/jquery.rs.checkable.js"></script>
+<script type="text/javascript" src="js/selectbox.jquery/selectize.min.js"></script>
+<script type="text/javascript" src="js/bxslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
 <script type="text/javascript" src="js/custom-script.js"></script>
 <!--end script-->
 

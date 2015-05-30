@@ -2,80 +2,86 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Heads Up</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Heads Up | Login</title>
 	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="js/jquery.checkable/jquery.rs.checkable.css" />
 	<link rel="stylesheet/less" type="text/css" href="css/animate.css">
-	<link rel="stylesheet/less" type="text/css" href="style.less">
+	<link rel="stylesheet/less" type="text/css" href="js/jquery.checkable/jquery.rs.checkable.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="style.less">-->
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 <header id="header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2 col-sm-1 logo">
-				<img src="images/logo.png" alt="" />
-			</div>
-			<div class="search-form">
-				<div data-ng-controller="uiSearchController" class="search ng-scope">
-					<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
-						<div class="input-group">
-							<div ng-class="{active: isOpen}" class="dropdown">
-								<input type="radio" ng-disabled="actionSelectDisabled" value="client" ng-model="context" id="search-freelancers" class="ng-untouched ng-valid ng-dirty ng-valid-parse" name="6">
-								<label for="search-freelancers">Freelancers</label>
-
-								<input type="radio" ng-disabled="actionSelectDisabled" value="freelancer" ng-model="context" id="search-jobs" class="ng-untouched ng-valid ng-dirty" name="7">
-								<label for="search-jobs">Jobs</label>
-							</div>
-							<span ng-click="toggleDropDown()" class="button"></span>
-							<input type="text" ng-model="query" autocomplete="off" maxlength="100" ng-placeholder="placeholder" placeholder="Find freelancers" name="q" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" kl_virtual_keyboard_secure_input="on">
-						</div>
-					</form>
+			<div class="col-md-8 col-sm-12">
+				<div class="logo">
+					<img src="images/logo.png" alt="" />
 				</div>
+				<div class="top-search">
+					<div class="search-form">
+						<div class="search ng-scope">
+							<form ng-init="context = 'client'" ng-submit="search()" method="get" ng-action="action" action="/o/profiles/browse/" role="search" class="ng-valid ng-isolate-scope ng-valid-maxlength ng-dirty ng-valid-parse">
+								<div class="input-group">
+									<ul ng-class="{active: isOpen}" class="dropdown" style="display: none;">
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Freelancers</a></li>
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Freelancers</a></li>
+										<li><a href="#">Jobs</a></li>
+										<li><a href="#">Freelancers</a></li>
+									</ul>
+									<span ng-click="toggleDropDown()" class="button"></span>
+									<input type="text" autocomplete="off" maxlength="100" placeholder="Search" name="q" class="search-input">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="more-category">
+						<span>XEM THÊM</span>
+						<ul class="list-category">
+							<li>
+								<span>Category</span>
+								<ul>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Category</span>
+								<ul>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Category</span>
+								<ul>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+									<li><a href="#">Sub Category</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
 			</div>
-			<div class="more-category">
-				<span>XEM THÊM</span>
-				<ul class="list-category">
-					<li>
-						<span>Category</span>
-						<ul>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>Category</span>
-						<ul>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>Category</span>
-						<ul>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-							<li><a href="#">Sub Category</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-
-
-			<div class="pull-right box-login">
+			<div class="col-md-4 col-sm-12 text-right box-login">
 				<a class="signup" href="#">Sign up </a>
 				<a class="login" href="#">Login</a>
 				<a class="pri-button" href="#">Post</a>
@@ -84,7 +90,19 @@
 	</div>
 </header>
 <!--end header-->
-<section class="content-area">
+<section class="content-area no-padding">
+	<div class="top-site-main">
+		<div class="container">
+			<div class="row">
+				<!--<ul class="ulbreadcrumbs" itemprop="breadcrumb">-->
+					<!--<li><a href="#">Home</a></li>-->
+					<!--<li><a href="#">browse</a></li>-->
+					<!--<li> Blog</li>-->
+				<!--</ul>-->
+			</div>
+		</div>
+	</div>
+	<!--end top-site-main-->
 	<div class="container site-content no-sidebar page-login">
 		<div class="row">
 			<main id="main" class="site-main ">
@@ -108,13 +126,8 @@
 				<div class="content-right">
 					<div class="connect-social">
 						<h2>Kết nối với</h2>
-
-						<div class="btn-face">
-							<button>Facebook</button>
-						</div>
-						<div class="btn-twitter">
-							<button>Twitter</button>
-						</div>
+						<a class="btn-face" href="#"><i class="fa fa-facebook"></i>Facebook</a>
+						<a class="btn-twitter" href="#"><i class="fa fa-twitter"></i>Twitter</a>
 						<p>Bằng việc tạo tài khoản tại Chợ Miễn Phí, bạn đã đồng ý với <a href="#">Quy định sử dụng</a>.
 						</p>
 					</div>
@@ -221,9 +234,7 @@
 
 <!--script-->
 <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-<script type="text/javascript" src="js/bootstrap3-typeahead.min.js"></script>
 <script type="text/javascript" src="js/less.min.js"></script>
-<script type="text/javascript" src="js/core.0.5.0.min.js"></script>
 <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 <script type="text/javascript" src="js/jquery.masonry.min.js"></script>

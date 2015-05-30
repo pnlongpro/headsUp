@@ -3,10 +3,10 @@
 	.logo > img {
 		max-width: 120px;
 	}
-	.content-area .site-main .list-article .col.col-1 {
+	.content-are.site-main .list-article .col.col-1 {
 		width: 38%;
 	}
-	.content-area .site-main .list-article .col.col-2 {
+	.content-are.site-main .list-article .col.col-2 {
 		width: 58%;
 	}
 
@@ -64,22 +64,26 @@
 		max-width: 430px;
 	}
 
-	.content-area .site-main {
+	.content-are.site-main {
 		float: none;
 		width: 100%;
 	}
-	.content-area .site-main .list-article .col.col-1 {
+	.content-are.site-main .list-article .col.col-1 {
 		width: 20%;
 	}
-	.content-area .site-main .list-article .col.col-2 {
+	.content-are.site-main .list-article .col.col-2 {
 		width: 30%;
 	}
-	.content-area .sidebar {
+	.content-are.sidebar {
 		float: none;
 		width: 100%;
 	}
-
-
+	.content-are.site-content.has-sidebar .site-main{
+		width: 100%;
+		float: none;
+		padding-bottom: 30px;
+	}
+	.sidebar .tab-pane.
 	footer .footer-top .widget {
 		width: 50% !important;
 		padding: 25px 20px !important;
@@ -92,7 +96,21 @@
 		border-right: none;
 	}
 }
+@media screen and (max-width: 600px){
+	.content-are.site-main .list-article .col.col-1,
+	.content-are.site-main .list-article .col.col-2{
+		width: 70%;
+		float: none;
+		margin: 0 auto;
+	}
+}
 @media screen and (max-width: 480px) {
+	.content-are.site-main .list-article .col.col-1,
+	.content-are.site-main .list-article .col.col-2{
+		width: 90%;
+		float: none;
+		margin: 0 auto;
+	}
 	#header .search-form {
 		float: none;
 		width: 100%;
@@ -150,3 +168,149 @@
 		margin-left: 30px;
 	}
 }
+a {
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+@media screen and (max-width: 1024px) {
+	.page-login .create-account {
+		padding-left: 30px;
+		padding-right: 20px;
+	}
+	.page-login .connect-social {
+		padding-right: 37px;
+	}
+}
+@media screen and (max-width: 960px) {
+	.page-post .content-post {
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+@media screen and (max-width: 800px) {
+	.page-login .content-left {
+		width: 30%;
+	}
+	.page-login .content-right {
+		width: 69%;
+	}
+	.list-article.masonry article.post-item {
+		width: 33.33%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.sidebar-left-setting {
+		height: auto !important;
+		padding-bottom: 40px;
+	}
+	.wp-pagenavi {
+		padding-bottom: 20px;
+	}
+	.wp-pagenavi span,
+	.wp-pagenavi a {
+		margin-bottom: 5px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.page-login .content-right {
+		width: 90%;
+		float: none;
+		margin: 30px auto 0;
+	}
+	.page-login .content-left {
+		width: 90%;
+		float: none;
+		margin: 0 auto;
+	}
+	.list-article.masonry article.post-item {
+		width: 50%;
+	}
+	.content-area{
+		padding-top: 0;
+	}
+}
+@media screen and (max-width: 568px) {
+	.avatar-images{
+		margin-top: 0;
+	}
+	.page-login .bnt-hay {
+		display: block;
+		height: 1px;
+		width: 100%;
+		position: relative;
+		float: none;
+		text-align: center;
+		margin: 30px 0;
+	}
+	.page-login .bnt-hay span {
+		border: 1px solid #eaebec;
+		border-radius: 10px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		background-color: #fff;
+		color: #979797;
+		right: 0;
+		margin: -16px auto 0;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+		padding: 0;
+	}
+	.page-login .connect-social {
+		width: 100%;
+		float: none;
+	}
+	.page-login .create-account {
+		width: 100%;
+		float: none;
+		padding-bottom: 30px;
+	}
+	.page-login .content-right {
+		height: auto;
+	}
+	.page-login .content-left {
+		height: auto;
+		padding-bottom: 30px;
+	}
+	.page-login {
+		padding: 30px 0 30px;
+	}
+	.page-post .content-post form {
+		height: auto;
+	}
+	.list-xem-theo {
+		text-align: center;
+	}
+	.list-xem-theo li {
+		padding: 0;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.page-post .content-post .form-group,
+	.page-post .content-post .btn-default,
+	.page-post .content-post .checkbox {
+		width: 90%;
+	}
+	.list-article.masonry article.post-item {
+		width: 60%;
+		right: 0;
+		margin: auto;
+	}
+	.page-post .content-post .form-group img {
+		height: auto;
+		width: 88px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.list-article.masonry article.post-item {
+		width: 90%;
+		right: 0;
+		margin: auto;
+	}
+}
+

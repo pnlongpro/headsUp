@@ -6,15 +6,20 @@ body {
 }
 
 #header {
-	height:      76px;
+	min-height:      76px;
 	line-height: 76px;
 	background:  #fff;
 }
-
+.logo {
+	float: left;
+}
+#header .top-search {
+	margin-left: 40px;
+	float:       left;
+}
 #header .search-form {
 	float:       left;
 	width:       333px;
-	margin-left: 40px;
 }
 
 #header .search-form form {
@@ -38,11 +43,22 @@ body {
 	width:         100%;
 	border-radius: 3px 0 0 3px;
 	overflow:      hidden;
-	height:        38px;
 	font-size:     14px;
 	z-index:       101;
-	top:           38px;
+	top:           40px;
 	margin:        0;
+	background: #fff;
+	border: 2px solid #edebeb;
+	padding: 10px 0;
+}
+#header .search-form form .dropdown li {
+	line-height: 28px;
+	list-style: none;
+	margin: 0 15px;
+}
+#header .search-form form .dropdown li a {
+	color: #282828;
+	font-weight: 700;
 }
 
 #header .search-form form .dropdown {
@@ -100,8 +116,8 @@ body {
 	font-family: "FontAwesome";
 	content:     "\f0d7";
 	position:    absolute;
-	left:        32px;
-	top:         0;
+	left:        35px;
+	top:         -3px;
 	color:       #edebeb;
 }
 
@@ -115,6 +131,10 @@ body {
 	border-radius: 2px;
 	border:        2px solid #e0e0e0;
 }
+#header .search-form input[type=text]:focus {
+	border-color: #00bb88;
+	box-shadow:   none;
+}
 
 #header .more-category {
 	display:        inline-block;
@@ -124,8 +144,9 @@ body {
 }
 
 #header .more-category > span {
-	font-size:   15px;
+	font-size:   14px;
 	font-weight: bold;
+	color: #4c4d4f;
 }
 
 #header .more-category > span:before {
@@ -247,9 +268,7 @@ body {
 	}
 }
 
-.clear {
-	clear: both;
-}
+
 
 .content-area {
 	padding:    55px 0 60px;
@@ -273,21 +292,16 @@ body {
 	.list-article {
 		.col {
 			float:        left;
-			margin-right: 7px;
 			&.col-1 {
 				width: 163px;
-
 			}
 			&.col-2 {
 				width: 250px;
 			}
 			.post-item {
-				float:         left;
-				margin-right:  7px;
-				margin-bottom: 7px;
-				position:      relative;
-				&.last {
-					margin-right: 0;
+				padding: 5px !important;
+				img {
+					width: 100%;
 				}
 				.content-meta {
 					position:      absolute;
@@ -339,11 +353,11 @@ body {
 				}
 				&:hover {
 					.hover {
-						display:                   block;
-						-webkit-animation-name:    fadeIn;
-						animation-name:            fadeIn;
-						webkit-animation-duration: 1s;
-						animation-duration:        1s;
+						display:                     block;
+						-webkit-animation-name:            fadeIn;
+						animation-name:                    fadeIn;
+						webkit-animation-duration:         1s;
+						animation-duration:                1s;
 					}
 				}
 				.hover {
@@ -354,8 +368,7 @@ body {
 					bottom:     0;
 					left:       0;
 					background: rgba(0, 187, 136, .8);
-					width:      100%;
-
+					margin: 4px;
 				}
 			}
 		}
